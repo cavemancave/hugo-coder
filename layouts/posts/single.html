@@ -20,6 +20,12 @@
                 {{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
               </time>
             </span>
+            <span class="last-mod">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+              <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+                {{ .Lastmod | time.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+              </time>
+            </span>
             <span class="reading-time">
               <i class="fa fa-clock-o" aria-hidden="true"></i>
               {{ i18n "reading_time" .ReadingTime }}
